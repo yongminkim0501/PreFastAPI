@@ -7,3 +7,18 @@ CRUD 기능 구현
 
 환자부터 구현 예정
 '''
+from fastapi import Depends, FastAPI, HTTPException
+from sqlalchemy.orm import Session
+
+from database import SessionLocal, engine, Base
+
+Base.metadata.create_all(bind=engine)
+
+app = FastAPI()
+# Dependency
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()

@@ -1,0 +1,25 @@
+# 가상 환경
+.venv/
+venv/
+ENV/
+
+# 개인 설정 파일
+secret.json
+.env
+
+# 파이썬 캐시 파일
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 로그 파일
+*.log
+
+# IDE 관련 파일
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS 관련 파일
+.DS_Store
